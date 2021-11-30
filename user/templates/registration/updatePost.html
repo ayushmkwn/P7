@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Update Post{% endblock title %}
+{% block body %}
+    <div class="container">
+        <h2>Update Post Information</h2>
+        <form method="post">
+            {%csrf_token%}
+            {{ form.as_p}}
+            <button type="submit" class="btn btn-info">Submit</button>
+            <a href="{% url 'user_post_list'  %}" class="btn btn-info">Back to Home</a>
+        </form>
+    </div>
+    
+{% endblock body %}

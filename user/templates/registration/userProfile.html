@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}User Profile{% endblock title %}
+{% block body %}
+    <div class="container my-2">
+        <h2>Complete your Profile</h2>
+        <form method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            {{ form.as_p}}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock body %}
